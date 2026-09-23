@@ -1,0 +1,92 @@
+# Keep the repository focused on training source/config while preserving folders.
+*
+
+# Repository metadata and empty-directory placeholders.
+!.gitignore
+!**/
+!**/.gitkeep
+
+# Training source and configuration.
+!src/**/*.py
+
+# Generated Python/cache files.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Non-training source currently kept only as folder structure.
+src/web/**
+!src/web/
+!src/web/.gitkeep
+
+# Local environments and editor state: keep only the top-level folders.
+.venv/**
+!.venv/
+!.venv/.gitkeep
+venv/**
+!venv/
+!venv/.gitkeep
+env/**
+!env/
+!env/.gitkeep
+.env
+.env.*
+.vscode/**
+!.vscode/
+!.vscode/.gitkeep
+.idea/**
+!.idea/
+!.idea/.gitkeep
+
+# Training data and generated model artifacts: keep folder structure only.
+data/**
+!data/
+!data/**/
+!data/**/.gitkeep
+
+checkpoint/**
+!checkpoint/
+!checkpoint/**/
+!checkpoint/**/.gitkeep
+
+models/**
+!models/
+!models/.gitkeep
+
+product_classification/**
+!product_classification/
+!product_classification/**/
+!product_classification/**/.gitkeep
+
+src/checkpoint/**
+!src/checkpoint/
+!src/checkpoint/**/
+!src/checkpoint/**/.gitkeep
+
+src/logs/**
+!src/logs/
+!src/logs/**/
+!src/logs/**/.gitkeep
+
+logs/**
+!logs/
+!logs/**/
+!logs/**/.gitkeep
+
+# Keep test folder shape without tracking current FastAPI test artifacts.
+test/**
+!test/
+!test/.gitkeep
+
+# Common experiment outputs.
+runs/**
+!runs/
+!runs/**/
+!runs/**/.gitkeep
+wandb/**
+mlruns/**
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+events.out.tfevents.*
